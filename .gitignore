@@ -1,0 +1,35 @@
+# dependencies & build output
+node_modules/
+web/dist/
+server/dist/
+.bun-cache/
+
+# runtime data (uploads, database)
+data/
+*.db
+*.db-shm
+*.db-wal
+
+# local tooling
+.tmp-node/
+.pw-browsers/
+.tmp-assets/
+*.log
+
+# editor / OS
+.DS_Store
+.idea/
+.vscode/
+
+# reference checkout
+PixelPunk/
+
+# browser-test screenshots
+.ui-shots/
+
+# isolated test database
+server/.test-data/
+
+# local secrets — never commit (use .env.example as the template)
+/.env
+/.dsh-meow/

@@ -1,0 +1,29 @@
+{
+  "name": "silverbed",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Silverbed — self-hosted imagebed: Bun + Elysia + Drizzle + Vue 3",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev:api": "bun run --cwd server dev",
+    "dev:web": "bun run --cwd web dev",
+    "build": "bun run --cwd web build",
+    "start": "bun run --cwd server start",
+    "seed": "bun run --cwd server seed",
+    "test": "bun run --cwd server test",
+    "test:ui": "bun run --cwd server test:ui",
+    "test:supabase": "bun run --cwd server test:supabase",
+    "typecheck": "bun run --cwd server typecheck && bun run --cwd web typecheck",
+    "build:node": "bun build server/src/vercel.ts --target=node --format=cjs --outfile=.tmp-node/handler.cjs --external sharp --external @aws-sdk/client-s3 --external @aws-sdk/s3-request-presigner",
+    "test:direct": "bun run --cwd server test:direct"
+  },
+  "engines": {
+    "bun": ">=1.2"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.1"
+  }
+}

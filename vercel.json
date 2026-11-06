@@ -1,0 +1,38 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "bun run build",
+  "outputDirectory": "web/dist",
+  "installCommand": "bun install",
+  "functions": {
+    "api/handler.ts": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/handler"
+    },
+    {
+      "source": "/i/:path*",
+      "destination": "/api/handler"
+    },
+    {
+      "source": "/image/:path*",
+      "destination": "/api/handler"
+    },
+    {
+      "source": "/s/:path*",
+      "destination": "/api/handler"
+    },
+    {
+      "source": "/open/:path*",
+      "destination": "/api/handler"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}

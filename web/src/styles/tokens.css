@@ -1,0 +1,38 @@
+/* Silverbed design tokens
+   A darkroom / contact-sheet language: warm neutral paper in light mode,
+   sub-zero neutral in dark mode, one safelight red that only marks actions. */
+
+:root,
+[data-theme="light"] {
+  --paper: #f0efea;
+  --paper-2: #e6e5df;
+  --paper-3: #dcdbd4;
+  --ink: #14161a;
+  --ink-2: #4a4e56;
+  --ink-3: #7b808a;
+  --rule: rgba(20, 22, 26, 0.14);
+  --rule-strong: rgba(20, 22, 26, 0.34);
+  --safelight: #d63b0b;
+  --safelight-soft: rgba(214, 59, 11, 0.12);
+  --kept: #6f7a3f;
+  --mark: #c9a227;
+  --grid: rgba(20, 22, 26, 0.08);
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --paper: #131518;
+  --paper-2: #191c20;
+  --paper-3: #21252a;
+  --ink: #ecebe6;
+  --ink-2: #a8adb5;
+  --ink-3: #757b84;
+  --rule: rgba(236, 235, 230, 0.13);
+  --rule-strong: rgba(236, 235, 230, 0.34);
+  --safelight: #ff6a3d;
+  --safelight-soft: rgba(255, 106, 61, 0.16);
+  --kept: #a8b46a;
+  --mark: #e0b93f;
+  --grid: rgba(236, 235, 230, 0.07);
+  color-scheme: dark;
+}

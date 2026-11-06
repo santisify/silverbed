@@ -1,0 +1,12 @@
+# Reference checkout and local artefacts are not part of a deployment.
+PixelPunk/
+data/
+.ui-shots/
+.pw-browsers/
+.idea/
+.dsh-meow/
+.tmp-*
+*.log
+
+# Playwright and test fixtures are only needed on a developer machine.
+server/test/
